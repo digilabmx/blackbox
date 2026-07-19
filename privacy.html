@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aviso de Privacidad — Proyecto BlackBox</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FFFFFF; --bg-soft:#F4F6F5; --surface:#FBFCFB;
+    --line:#E3E7E4; --text:#1B211E; --text-muted:#5B655F;
+    --teal:#2C6E62; --teal-soft: rgba(44,110,98,0.08); --teal-line: rgba(44,110,98,0.28);
+    --coral:#DE5B3E;
+    --display:'Space Grotesk',sans-serif; --mono:'IBM Plex Mono',monospace; --body:'Inter',sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{background:var(--bg);color:var(--text);font-family:var(--body);line-height:1.65;}
+  .wrap{max-width:760px;margin:0 auto;padding:56px 28px 100px;}
+  .eyebrow{
+    font-family:var(--mono);font-size:12.5px;color:var(--teal);text-transform:uppercase;
+    letter-spacing:0.06em;border:1px solid var(--teal-line);background:var(--teal-soft);
+    display:inline-block;padding:6px 12px;border-radius:100px;margin-bottom:20px;
+  }
+  h1{font-family:var(--display);font-weight:700;font-size:clamp(28px,4vw,40px);letter-spacing:-0.01em;margin-bottom:12px;}
+  .updated{font-family:var(--mono);font-size:12.5px;color:var(--text-muted);margin-bottom:36px;}
+  h2{font-family:var(--display);font-weight:600;font-size:20px;margin:36px 0 12px;}
+  p, li{font-size:15.5px;color:var(--text-muted);}
+  p{margin-bottom:14px;}
+  ul{margin:0 0 14px 20px;}
+  li{margin-bottom:8px;}
+  strong{color:var(--text);}
+  .box{
+    background:var(--surface);border:1px solid var(--line);border-radius:10px;
+    padding:20px 22px;margin:20px 0;
+  }
+  .box.warn{border-color: rgba(222,91,62,0.32); background: rgba(222,91,62,0.06);}
+  .box p:last-child{margin-bottom:0;}
+  a{color:var(--teal);}
+  footer{margin-top:48px;padding-top:20px;border-top:1px solid var(--line);font-family:var(--mono);font-size:12px;color:var(--text-muted);}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <span class="eyebrow">Versión Beta · MVP</span>
+  <h1>Aviso de Privacidad</h1>
+  <div class="updated">Proyecto BlackBox · Última actualización: julio 2026</div>
+
+  <div class="box warn">
+    <p><strong>Nota de etapa beta:</strong> Proyecto BlackBox está actualmente en fase de
+    producto mínimo viable (MVP). Este aviso describe cómo funciona el tratamiento de
+    datos en esta etapa y puede actualizarse conforme el proyecto madure. Te avisaremos
+    dentro de la app si hay cambios relevantes.</p>
+  </div>
+
+  <h2>1. Quién es responsable de tus datos</h2>
+  <p>Proyecto BlackBox es una iniciativa sin fines de lucro. Para efectos de este aviso,
+  actuamos como <strong>responsables del tratamiento</strong> de los datos personales
+  que se describen abajo, conforme a la Ley Federal de Protección de Datos Personales en
+  Posesión de los Particulares (LFPDPPP). Puedes contactarnos en
+  <strong>proyectoblackbox@protonmail.com</strong> para cualquier duda o solicitud
+  relacionada con tus datos.</p>
+
+  <h2>2. Qué es lo que SÍ podemos ver</h2>
+  <p>Tratamos los siguientes datos personales para poder operar el servicio:</p>
+  <ul>
+    <li>Tu nombre completo, sexo, y fecha de nacimiento</li>
+    <li>Tu número de teléfono y el de tus contactos de confianza (para verificar identidad)</li>
+    <li>La relación entre quién es contacto de confianza de quién</li>
+    <li>Metadatos de actividad: cuándo se activó una alerta, cuándo se verificó un número,
+    cuándo se otorgó o solicitó acceso</li>
+    <li>Si presentas una solicitud de acceso de emergencia (cuando no hubo una alerta
+    automática): tu nombre, tu relación con la persona, y los datos necesarios para
+    confirmar su identidad (ver sección 4)</li>
+  </ul>
+  <div class="box">
+    <p><strong>¿Por qué pedimos sexo y fecha de nacimiento?</strong> Únicamente para que,
+    en caso de una desaparición sin alerta previa, quien revise la solicitud pueda
+    confirmar la identidad de la persona contra el Registro Nacional de Personas
+    Desaparecidas y No Localizadas (RNPDNO) — la herramienta pública oficial del gobierno
+    de México para este fin. No usamos estos datos para ningún otro propósito.</p>
+  </div>
+
+  <h2>3. Qué es lo que NO podemos ver</h2>
+  <div class="box">
+    <p>El contenido de tu ubicación, tu huella de movimiento, y los registros de
+    dispositivos cercanos se cifran <strong>en tu propio teléfono</strong> antes de
+    subirse a la nube, usando un esquema de cifrado de sobre: cada registro se cifra con
+    una llave que solo el teléfono de cada contacto de confianza puede abrir.</p>
+    <p><strong>Proyecto BlackBox no tiene, en ningún momento, la llave para leer ese
+    contenido.</strong> Nuestro papel se limita a decidir <em>cuándo</em> se autoriza que
+    un contacto de confianza pueda abrir su copia — nunca a leer el contenido nosotros
+    mismos.</p>
+  </div>
+
+  <h2>4. Cuándo se comparte tu ubicación, y con quién</h2>
+  <p>Tu ubicación y huella <strong>nunca</strong> están disponibles para consulta libre
+  por parte de tus contactos de confianza. Solo se desbloquean en dos casos:</p>
+  <ul>
+    <li><strong>Alerta automática real</strong> (10 clics del botón de volumen, o
+    detección de un posible choque): el acceso a las últimas 72 horas se libera de forma
+    automática a tus contactos de confianza, sin intervención de nuestro equipo.</li>
+    <li><strong>Solicitud de emergencia sin alerta previa:</strong> un familiar puede
+    solicitar acceso. Nuestro equipo confirma la identidad de la persona consultando
+    manualmente el <a href="https://consultapublicarnpdno.segob.gob.mx/consulta" target="_blank">Registro Nacional de Personas Desaparecidas y No Localizadas (RNPDNO)</a>
+    —la herramienta pública oficial del gobierno de México— con el nombre completo, sexo,
+    y fecha de nacimiento en archivo, antes de decidir si autoriza el acceso. En ningún
+    caso el equipo revisor obtiene acceso al contenido cifrado en sí.</li>
+  </ul>
+
+  <h2>5. Cuánto tiempo se conservan tus datos</h2>
+  <p>La huella cifrada se conserva por un máximo de 72 horas de forma continua; los
+  registros con más antigüedad se eliminan automáticamente. Los metadatos de cuenta
+  (número verificado, lista de contactos) se conservan mientras tu cuenta esté activa.</p>
+
+  <h2>6. Tus derechos (ARCO)</h2>
+  <p>Puedes ejercer en cualquier momento tus derechos de <strong>Acceso, Rectificación,
+  Cancelación y Oposición</strong> sobre tus datos personales, sin costo, escribiendo a
+  <strong>proyectoblackbox@protonmail.com</strong>. Responderemos dentro de los plazos que
+  marca la ley.</p>
+
+  <h2>7. Terceros involucrados</h2>
+  <p>Usamos Firebase (Google) como proveedor de infraestructura para verificación de
+  identidad y almacenamiento cifrado. Google actúa como encargado del tratamiento bajo
+  sus propios términos de servicio para Firebase.</p>
+
+  <h2>8. Consentimiento</h2>
+  <p>Al registrar tu número de teléfono en la app, confirmas que leíste este aviso y
+  aceptas el tratamiento de datos aquí descrito. Puedes retirar tu consentimiento en
+  cualquier momento eliminando tu cuenta desde la app o escribiéndonos.</p>
+
+  <footer>
+    Proyecto BlackBox — iniciativa sin fines de lucro · proyectoblackbox@protonmail.com
+  </footer>
+</div>
+</body>
+</html>
